@@ -29,3 +29,14 @@ sort(int *arr, int n, double *time)
     end = clock();
     *time = ((double) (end - start)) / CLOCKS_PER_SEC;
 }
+
+
+void
+invert(int *arr, int n)
+{
+    for (int i = 0, j = n-1; i < j; ++i, --j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+}
